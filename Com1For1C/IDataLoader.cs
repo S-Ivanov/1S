@@ -12,6 +12,31 @@ namespace Com1For1C
     [Guid("AC2275BD-D8E9-4EC5-988C-3BCE4E1E92BE")]
     public interface IDataLoader
     {
+        [DispId(1)]
+        int GetInt();
 
+        [DispId(2)]
+        void SetInt(int value);
+
+        [DispId(3)]
+        int IntValue { get; set; }
+
+        [DispId(4)]
+        string StrValue { get; set; }
+
+        [DispId(5)]
+        double DoubleValue { get; set; }
+
+        [DispId(6)]
+        DateTime DateTimeValue { get; set; }
+
+        [DispId(7)]
+        int[] IntArray { get; }
+
+        [DispId(8)]
+        int[] GetIntArray();
+
+        [DispId(9)]
+        object[] ObjectArray { get; }
     }
 }
