@@ -1,2 +1,12 @@
-﻿Быстрое создание Внешних Компонент на C#. Примеры использования Глобального Контекста, IAsyncEvent, IExtWndsSupport, WinForms и WPF
-http://tf21.ru/public/457898/
+﻿Соответствие типов:
+C# (COM)	<->		1С
+int					Число
+double				Число
+DateTime			Дата
+string				Строка
+?					Булево
+object				?
+int[]				Array (C#)	-	COM-объект, эквивалентный классу System.Array ([ComVisibleAttribute(true)])
+									Доступ к значениям через методы GetValue(...) и SetValue(...)
+									Свойства читаются через Get-методы, например, вместо Length - GetLength()
+string[]			Array (C#)

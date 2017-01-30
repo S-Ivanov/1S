@@ -58,6 +58,19 @@ namespace Com1For1C
             }
         }
 
+        public object[,] ObjectArray2
+        {
+            get
+            {
+                return new object[,]
+                {
+                    { "Целое",  "Вещ.",     "Дата",         "Строка",   "Булево"},
+                    { 10,       1.5,        DateTime.Now,   "проверка", true },
+                    { 20,       2.5,        DateTime.Now,   "test",     false },
+                };
+            }
+        }
+
         public int GetInt()
         {
             return intValue;

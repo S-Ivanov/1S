@@ -38,5 +38,8 @@ namespace Com1For1C
 
         [DispId(9)]
         object[] ObjectArray { get; }
+
+        [DispId(10)]
+        object[,] ObjectArray2 { get; }
     }
 }
