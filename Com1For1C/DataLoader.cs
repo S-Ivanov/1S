@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DataSource;
+using System;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace Com1For1C
 {
@@ -82,5 +81,54 @@ namespace Com1For1C
         }
 
         int intValue = 10;
+
+        ИсходныеДанные_Генератор исходныеДанные = new ИсходныеДанные_Генератор
+        {
+            КоличествоКомпаний = 10,
+            КоличествоПродукции = 10
+        };
+
+        public void InitData(int companies, int products)
+        {
+            исходныеДанные = new ИсходныеДанные_Генератор
+            {
+                КоличествоКомпаний = companies,
+                КоличествоПродукции = products
+            };
+        }
+
+        public DataEnumerable GetCompanies(int maxCode)
+        {
+            return new DataEnumerable(
+                исходныеДанные
+                .ПолучитьКомпании()
+                .Select(
+                    company => new object[] 
+                    {
+                        maxCode + company.Код,
+                        company.Наименование
+                    }));
+        }
+
+        public DataEnumerable GetData()
+        {
+            return new DataEnumerable(
+                исходныеДанные.ПолучитьКомпании()
+                .Select(
+                    company => new object[]
+                    {
+                        company.Код,
+                        company.Наименование,
+                        new DataEnumerable(
+                            исходныеДанные.ПолучитьПродукцию(company)
+                            .Select(
+                                product => new object[]
+                                {
+                                    product.Код,
+                                    product.Наименование
+                                }))
+                    }));
+        }
+
     }
 }

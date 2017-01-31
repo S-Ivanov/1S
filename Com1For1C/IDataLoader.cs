@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -41,5 +42,41 @@ namespace Com1For1C
 
         [DispId(10)]
         object[,] ObjectArray2 { get; }
+
+        [DispId(11)]
+        void InitData(int companies, int products);
+
+        [DispId(12)]
+        DataEnumerable GetCompanies(int maxCode);
+
+        /// <summary>
+        /// Получить комплексные данные
+        /// </summary>
+        /// <returns></returns>
+        /// <example>
+        /// МойОбъект = Новый COMОбъект("Com1For1C.DataLoader");
+        /// Компании = МойОбъект.GetData();
+        /// Для Каждого КомпанияДанные из Компании Цикл
+        ///     Компания = Справочники.Компании.СоздатьЭлемент();
+        ///     Компания.Код = КомпанияДанные.GetValue(0);
+        ///     Компания.Наименование = КомпанияДанные.GetValue(1);
+        ///     Компания.Записать();
+        ///     
+        ///     КомпанияСсылка = Компания.Ссылка;
+        ///     
+        ///     ПродукцияКомпании = КомпанияДанные.GetValue(2);
+        ///     Для Каждого ПродукцияДанные из ПродукцияКомпании Цикл
+        ///         Продукция = Справочники.Продукция.СоздатьЭлемент();
+        ///         Продукция.Код = ПродукцияДанные.GetValue(0);
+        ///         Продукция.Наименование = ПродукцияДанные.GetValue(1);
+        ///         Продукция.Компания = КомпанияСсылка;
+        ///         Продукция.Записать();
+        ///     КонецЦикла;
+        /// КонецЦикла;
+        /// 
+        /// Сообщить("Ok");
+        /// </example>
+        [DispId(13)]
+        DataEnumerable GetData();
     }
 }
