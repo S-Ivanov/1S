@@ -125,7 +125,8 @@ namespace Com1For1C
                                 product => new object[]
                                 {
                                     product.Код,
-                                    product.Наименование
+                                    product.Наименование,
+                                    company.Код
                                 }))
                     }));
         }
