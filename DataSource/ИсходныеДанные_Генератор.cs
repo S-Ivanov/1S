@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DataSource
@@ -18,7 +19,7 @@ namespace DataSource
             IEnumerable<КомпанияDTO> компании = компания == null ? ПолучитьКомпании() : new[] { компания };
             return компании
                 .SelectMany(o => Enumerable.Range((o.Код - 1) * КоличествоПродукции + 1, КоличествоПродукции)
-                    .Select(x => new ПродукцияDTO { Код = x, Наименование = string.Format("Продукция {0}", x), Компания = o }));
+                    .Select(x => new ПродукцияDTO { Код = x, Наименование = string.Format("Продукция {0}-{1}", o.Код, x), Компания = o }));
         }
     }
 }

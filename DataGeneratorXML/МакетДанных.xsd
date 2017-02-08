@@ -1,0 +1,20 @@
+﻿<xs:schema xmlns:tns="http://www.sample-package.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sample-package.org" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:element name="Данные">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Компания" type="tns:Компания" maxOccurs="1000000"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Компания">
+		<xs:sequence>
+			<xs:element name="Продукция" type="tns:Продукция" minOccurs="0" maxOccurs="1000000"/>
+		</xs:sequence>
+		<xs:attribute name="Код" type="xs:int" use="required"/>
+		<xs:attribute name="Наименование" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Продукция">
+		<xs:attribute name="Код" type="xs:int" use="required"/>
+		<xs:attribute name="Наименование" type="xs:string" use="required"/>
+	</xs:complexType>
+</xs:schema>
