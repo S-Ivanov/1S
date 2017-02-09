@@ -9,7 +9,7 @@ namespace DataGeneratorCSV
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Генерация данных для тестирования 1С. Запись в CSV-файл.");
+            Console.WriteLine("Генерация данных для тестирования 1С. Запись в CSV-файлы.");
 
             Console.Write("Количество компаний: ");
             int companyCount = int.Parse(Console.ReadLine());

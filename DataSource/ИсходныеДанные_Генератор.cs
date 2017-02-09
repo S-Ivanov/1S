@@ -11,7 +11,7 @@ namespace DataSource
 
         public IEnumerable<КомпанияDTO> ПолучитьКомпании()
         {
-            return Enumerable.Range(1, КоличествоКомпаний).Select(x => new КомпанияDTO { Код = x, Наименование = string.Format("Компания {0}", x) });
+            return Enumerable.Range(1, КоличествоКомпаний).Select(x => new КомпанияDTO { _IDRRef = Guid.NewGuid(), Код = x, Наименование = string.Format("Компания {0}", x) });
         }
 
         public IEnumerable<ПродукцияDTO> ПолучитьПродукцию(КомпанияDTO компания = null)
@@ -19,7 +19,7 @@ namespace DataSource
             IEnumerable<КомпанияDTO> компании = компания == null ? ПолучитьКомпании() : new[] { компания };
             return компании
                 .SelectMany(o => Enumerable.Range((o.Код - 1) * КоличествоПродукции + 1, КоличествоПродукции)
-                    .Select(x => new ПродукцияDTO { Код = x, Наименование = string.Format("Продукция {0}-{1}", o.Код, x), Компания = o }));
+                    .Select(x => new ПродукцияDTO { _IDRRef = Guid.NewGuid(), Код = x, Наименование = string.Format("Продукция {0}-{1}", o.Код, x), Компания = o }));
         }
     }
 }
