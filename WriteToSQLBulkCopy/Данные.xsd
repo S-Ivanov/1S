@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Данные" targetNamespace="http://tempuri.org/Данные.xsd" xmlns:mstns="http://tempuri.org/Данные.xsd" xmlns="http://tempuri.org/Данные.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Данные" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Данные" msprop:Generator_UserDSName="Данные">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Компании" msprop:Generator_TableClassName="КомпанииDataTable" msprop:Generator_TableVarName="tableКомпании" msprop:Generator_TablePropName="Компании" msprop:Generator_RowDeletingName="КомпанииRowDeleting" msprop:Generator_RowChangingName="КомпанииRowChanging" msprop:Generator_RowEvHandlerName="КомпанииRowChangeEventHandler" msprop:Generator_RowDeletedName="КомпанииRowDeleted" msprop:Generator_UserTableName="Компании" msprop:Generator_RowChangedName="КомпанииRowChanged" msprop:Generator_RowEvArgName="КомпанииRowChangeEvent" msprop:Generator_RowClassName="КомпанииRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="_IDRRef" msprop:Generator_ColumnVarNameInTable="column_IDRRef" msprop:Generator_ColumnPropNameInRow="_IDRRef" msprop:Generator_ColumnPropNameInTable="_IDRRefColumn" msprop:Generator_UserColumnName="_IDRRef" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="_Version" msprop:Generator_ColumnVarNameInTable="column_Version" msprop:Generator_ColumnPropNameInRow="_Version" msprop:Generator_ColumnPropNameInTable="_VersionColumn" msprop:Generator_UserColumnName="_Version" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="_Marked" msprop:Generator_ColumnVarNameInTable="column_Marked" msprop:Generator_ColumnPropNameInRow="_Marked" msprop:Generator_ColumnPropNameInTable="_MarkedColumn" msprop:Generator_UserColumnName="_Marked" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="_PredefinedID" msprop:Generator_ColumnVarNameInTable="column_PredefinedID" msprop:Generator_ColumnPropNameInRow="_PredefinedID" msprop:Generator_ColumnPropNameInTable="_PredefinedIDColumn" msprop:Generator_UserColumnName="_PredefinedID" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="_Code" msprop:Generator_ColumnVarNameInTable="column_Code" msprop:Generator_ColumnPropNameInRow="_Code" msprop:Generator_ColumnPropNameInTable="_CodeColumn" msprop:Generator_UserColumnName="_Code" type="xs:string" minOccurs="0" />
+              <xs:element name="_Description" msprop:Generator_ColumnVarNameInTable="column_Description" msprop:Generator_ColumnPropNameInRow="_Description" msprop:Generator_ColumnPropNameInTable="_DescriptionColumn" msprop:Generator_UserColumnName="_Description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Продукция" msprop:Generator_TableClassName="ПродукцияDataTable" msprop:Generator_TableVarName="tableПродукция" msprop:Generator_TablePropName="Продукция" msprop:Generator_RowDeletingName="ПродукцияRowDeleting" msprop:Generator_RowChangingName="ПродукцияRowChanging" msprop:Generator_RowEvHandlerName="ПродукцияRowChangeEventHandler" msprop:Generator_RowDeletedName="ПродукцияRowDeleted" msprop:Generator_UserTableName="Продукция" msprop:Generator_RowChangedName="ПродукцияRowChanged" msprop:Generator_RowEvArgName="ПродукцияRowChangeEvent" msprop:Generator_RowClassName="ПродукцияRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="_IDRRef" msprop:Generator_ColumnVarNameInTable="column_IDRRef" msprop:Generator_ColumnPropNameInRow="_IDRRef" msprop:Generator_ColumnPropNameInTable="_IDRRefColumn" msprop:Generator_UserColumnName="_IDRRef" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="_Version" msprop:Generator_ColumnVarNameInTable="column_Version" msprop:Generator_ColumnPropNameInRow="_Version" msprop:Generator_ColumnPropNameInTable="_VersionColumn" msprop:Generator_UserColumnName="_Version" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="_Marked" msprop:Generator_ColumnVarNameInTable="column_Marked" msprop:Generator_ColumnPropNameInRow="_Marked" msprop:Generator_ColumnPropNameInTable="_MarkedColumn" msprop:Generator_UserColumnName="_Marked" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="_PredefinedID" msprop:Generator_ColumnVarNameInTable="column_PredefinedID" msprop:Generator_ColumnPropNameInRow="_PredefinedID" msprop:Generator_ColumnPropNameInTable="_PredefinedIDColumn" msprop:Generator_UserColumnName="_PredefinedID" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="_Code" msprop:Generator_ColumnVarNameInTable="column_Code" msprop:Generator_ColumnPropNameInRow="_Code" msprop:Generator_ColumnPropNameInTable="_CodeColumn" msprop:Generator_UserColumnName="_Code" type="xs:string" minOccurs="0" />
+              <xs:element name="_Description" msprop:Generator_ColumnVarNameInTable="column_Description" msprop:Generator_ColumnPropNameInRow="_Description" msprop:Generator_ColumnPropNameInTable="_DescriptionColumn" msprop:Generator_UserColumnName="_Description" type="xs:string" minOccurs="0" />
+              <xs:element name="_Fld20RRef" msprop:Generator_ColumnVarNameInTable="column_Fld20RRef" msprop:Generator_ColumnPropNameInRow="_Fld20RRef" msprop:Generator_ColumnPropNameInTable="_Fld20RRefColumn" msprop:Generator_UserColumnName="_Fld20RRef" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

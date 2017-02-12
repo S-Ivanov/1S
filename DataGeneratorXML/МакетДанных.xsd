@@ -8,12 +8,12 @@
             <xs:sequence>
               <xs:element maxOccurs="unbounded" name="Продукция">
                 <xs:complexType>
-                  <xs:attribute name="код" type="xs:int" use="required" />
+                  <xs:attribute name="код" type="xs:unsignedInt" use="required" />
                   <xs:attribute name="наименование" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <xs:attribute name="код" type="xs:int" use="required" />
+            <xs:attribute name="код" type="xs:unsignedInt" use="required" />
             <xs:attribute name="наименование" type="xs:string" use="required" />
           </xs:complexType>
         </xs:element>

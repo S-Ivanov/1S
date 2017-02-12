@@ -33,78 +33,66 @@ namespace WriteToSQL
             {
                 con.Open();
 
-                SqlTransaction tran = con.BeginTransaction();
-                try
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = "TRUNCATE TABLE [dbo].[_Reference19]";
+                cmd.ExecuteNonQuery();
+
+                cmd.CommandText = "TRUNCATE TABLE [dbo].[_Reference7]";
+                cmd.ExecuteNonQuery();
+
+                cmd.CommandText =
+                    @"INSERT INTO [dbo].[_Reference7]
+                            ([_IDRRef]
+                            ,[_Marked]
+                            ,[_PredefinedID]
+                            ,[_Code]
+                            ,[_Description])
+                        VALUES
+                            (@_IDRRef
+                            ,@_Marked
+                            ,@_PredefinedID
+                            ,@_Code
+                            ,@_Description)";
+                cmd.Parameters.Add("@_IDRRef", SqlDbType.Binary, 16);
+                cmd.Parameters.AddWithValue("@_Marked", new byte[] { 0 });
+                cmd.Parameters.AddWithValue("@_PredefinedID", Guid.Empty.ToByteArray());
+                cmd.Parameters.Add("@_Code", SqlDbType.NVarChar, 9);
+                cmd.Parameters.Add("@_Description", SqlDbType.NVarChar, 25);
+
+                foreach (var c in компании)
                 {
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-                    cmd.Transaction = tran;
-
-                    cmd.CommandText = "TRUNCATE TABLE [dbo].[_Reference19]";
+                    cmd.Parameters[0].Value = c._IDRRef.ToByteArray();
+                    cmd.Parameters[3].Value = c.Код.ToString("D9");
+                    cmd.Parameters[4].Value = c.Наименование;
                     cmd.ExecuteNonQuery();
-
-                    cmd.CommandText = "TRUNCATE TABLE [dbo].[_Reference7]";
-                    cmd.ExecuteNonQuery();
-
-                    cmd.CommandText =
-                        @"INSERT INTO [dbo].[_Reference7]
-                               ([_IDRRef]
-                               ,[_Marked]
-                               ,[_PredefinedID]
-                               ,[_Code]
-                               ,[_Description])
-                         VALUES
-                               (@_IDRRef
-                               ,@_Marked
-                               ,@_PredefinedID
-                               ,@_Code
-                               ,@_Description)";
-                    cmd.Parameters.Add("@_IDRRef", SqlDbType.Binary, 16);
-                    cmd.Parameters.AddWithValue("@_Marked", new byte[] { 0 });
-                    cmd.Parameters.AddWithValue("@_PredefinedID", Guid.Empty.ToByteArray());
-                    cmd.Parameters.Add("@_Code", SqlDbType.NVarChar, 9);
-                    cmd.Parameters.Add("@_Description", SqlDbType.NVarChar, 25);
-
-                    foreach (var c in компании)
-                    {
-                        cmd.Parameters[0].Value = c._IDRRef.ToByteArray();
-                        cmd.Parameters[3].Value = c.Код.ToString("D9");
-                        cmd.Parameters[4].Value = c.Наименование;
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    cmd.CommandText =
-                        @"INSERT INTO [dbo].[_Reference19]
-                               ([_IDRRef]
-                               ,[_Marked]
-                               ,[_PredefinedID]
-                               ,[_Code]
-                               ,[_Description]
-                               ,[_Fld20RRef])
-                         VALUES
-                               (@_IDRRef
-                               ,@_Marked
-                               ,@_PredefinedID
-                               ,@_Code
-                               ,@_Description
-                               ,@_Fld20RRef)";
-                    cmd.Parameters.Add("@_Fld20RRef", SqlDbType.Binary, 16);
-
-                    foreach (var p in продукция)
-                    {
-                        cmd.Parameters[0].Value = p._IDRRef.ToByteArray();
-                        cmd.Parameters[3].Value = p.Код.ToString("D9");
-                        cmd.Parameters[4].Value = p.Наименование;
-                        cmd.Parameters[5].Value = p.Компания._IDRRef.ToByteArray();
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    tran.Commit();
                 }
-                catch
+
+                cmd.CommandText =
+                    @"INSERT INTO [dbo].[_Reference19]
+                            ([_IDRRef]
+                            ,[_Marked]
+                            ,[_PredefinedID]
+                            ,[_Code]
+                            ,[_Description]
+                            ,[_Fld20RRef])
+                        VALUES
+                            (@_IDRRef
+                            ,@_Marked
+                            ,@_PredefinedID
+                            ,@_Code
+                            ,@_Description
+                            ,@_Fld20RRef)";
+                cmd.Parameters.Add("@_Fld20RRef", SqlDbType.Binary, 16);
+
+                foreach (var p in продукция)
                 {
-                    tran.Rollback();
-                    throw;
+                    cmd.Parameters[0].Value = p._IDRRef.ToByteArray();
+                    cmd.Parameters[3].Value = p.Код.ToString("D9");
+                    cmd.Parameters[4].Value = p.Наименование;
+                    cmd.Parameters[5].Value = p.Компания._IDRRef.ToByteArray();
+                    cmd.ExecuteNonQuery();
                 }
             }
 
