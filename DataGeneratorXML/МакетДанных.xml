@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
-<Данные>
+<Данные xmlns="http://localhost/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Компания код="1" наименование="Компания 1">
 		<Продукция код="1" наименование="Продукция 1-1"/>
 		<Продукция код="2" наименование="Продукция 1-2"/>

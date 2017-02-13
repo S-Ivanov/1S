@@ -1,23 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="1S">
-  <xs:element name="Данные">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element maxOccurs="unbounded" name="Компания">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element maxOccurs="unbounded" name="Продукция">
-                <xs:complexType>
-                  <xs:attribute name="код" type="xs:unsignedInt" use="required" />
-                  <xs:attribute name="наименование" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-            <xs:attribute name="код" type="xs:unsignedInt" use="required" />
-            <xs:attribute name="наименование" type="xs:string" use="required" />
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+﻿<xs:schema xmlns:tns="http://localhost/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://localhost/xdto" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:element name="Данные">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Компания" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Продукция" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="код" type="xs:unsignedInt" use="required"/>
+									<xs:attribute name="наименование" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="код" type="xs:unsignedInt" use="required"/>
+						<xs:attribute name="наименование" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 </xs:schema>

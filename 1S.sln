@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteToSQL", "WriteToSQL\Wr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteToSQLBulkCopy", "WriteToSQLBulkCopy\WriteToSQLBulkCopy.csproj", "{368C676E-D3BB-4DF9-BA3D-71D2BF54B880}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGeneratorSQL", "DataGeneratorSQL\DataGeneratorSQL.csproj", "{1471A4C7-311A-49E4-975D-32B418460F12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{368C676E-D3BB-4DF9-BA3D-71D2BF54B880}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{368C676E-D3BB-4DF9-BA3D-71D2BF54B880}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{368C676E-D3BB-4DF9-BA3D-71D2BF54B880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1471A4C7-311A-49E4-975D-32B418460F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1471A4C7-311A-49E4-975D-32B418460F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1471A4C7-311A-49E4-975D-32B418460F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1471A4C7-311A-49E4-975D-32B418460F12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
