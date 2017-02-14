@@ -15,37 +15,26 @@ namespace Com1For1C
     {
         [DispId(1)]
         int GetInt();
-
         [DispId(2)]
         void SetInt(int value);
-
         [DispId(3)]
         int IntValue { get; set; }
-
         [DispId(4)]
         string StrValue { get; set; }
-
         [DispId(5)]
         double DoubleValue { get; set; }
-
         [DispId(6)]
         DateTime DateTimeValue { get; set; }
-
         [DispId(7)]
         int[] IntArray { get; }
-
         [DispId(8)]
         int[] GetIntArray();
-
         [DispId(9)]
         object[] ObjectArray { get; }
-
         [DispId(10)]
         object[,] ObjectArray2 { get; }
-
         [DispId(11)]
         void InitData(int companies, int products);
-
         [DispId(12)]
         DataEnumerable GetCompanies(int maxCode);
 
