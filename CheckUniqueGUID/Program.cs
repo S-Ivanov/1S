@@ -18,7 +18,6 @@ namespace CheckUniqueGUID
                 КоличествоКомпаний = companyCount,
                 КоличествоПродукции = productCount
             };
-
             var companies = исходныеДанные.ПолучитьКомпании().ToList();
             var products = исходныеДанные.ПолучитьПродукцию().ToList();
 
