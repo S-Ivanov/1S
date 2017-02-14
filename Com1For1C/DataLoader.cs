@@ -20,10 +20,7 @@ namespace Com1For1C
 
         public int IntValue
         {
-            get
-            {
-                return intValue;
-            }
+            get { return intValue; }
             set
             {
                 intValue = value;
