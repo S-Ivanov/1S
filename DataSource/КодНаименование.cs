@@ -5,7 +5,9 @@ namespace DataSource
     public class КодНаименование : IEquatable<КодНаименование>
     {
         public Guid _IDRRef { get; set; }
+
         public int Код { get; set; }
+
         public string Наименование { get; set; }
 
         public bool Equals(КодНаименование other)
