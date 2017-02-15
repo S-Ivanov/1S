@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DataSource;
 
-namespace МодульныеТесты
+namespace МодульныеТесты 
 {
     [TestClass]
     public class ИсходныеДанные_Генератор_Tests
