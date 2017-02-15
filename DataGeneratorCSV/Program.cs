@@ -25,7 +25,6 @@ namespace DataGeneratorCSV
                 КоличествоКомпаний = companyCount,
                 КоличествоПродукции = productCount
             };
-
             var companies = исходныеДанные.ПолучитьКомпании().ToList();
             var products = исходныеДанные.ПолучитьПродукцию().OrderBy(p => p.Компания.Код).ToList();
 
