@@ -1,4 +1,4 @@
-USE [Test1S]
+USE [Test1S] 
 GO
 
 TRUNCATE TABLE [dbo].[_Reference19]
