@@ -15,7 +15,6 @@ using System.Xml.Serialization;
 // Этот исходный код был создан с помощью xsd, версия=4.6.1055.0.
 // 
 
-
 /// <remarks/>
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
 [System.SerializableAttribute()]
