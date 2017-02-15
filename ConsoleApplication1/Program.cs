@@ -22,7 +22,6 @@ namespace ConsoleApplication1
                 КоличествоКомпаний = int.Parse(ConfigurationManager.AppSettings["количествоКомпаний"]),
                 КоличествоПродукции = int.Parse(ConfigurationManager.AppSettings["количествоПродукции"])
             };
-
             var продукция = исходныеДанные.ПолучитьПродукцию().ToList();
             if (продукция.Count == 0)
             {
