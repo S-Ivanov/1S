@@ -1,5 +1,5 @@
 ﻿<xs:schema xmlns:tns="http://localhost/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://localhost/xdto" attributeFormDefault="unqualified" elementFormDefault="qualified">
-	<xs:element name="Данные">
+	<xs:element name="Данные"> 
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="Компания" maxOccurs="unbounded">
