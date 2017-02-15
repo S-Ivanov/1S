@@ -1,6 +1,6 @@
 ﻿namespace DataSource
 {
-    public class КомпанияDTO : КодНаименование
+    public class КомпанияDTO : КодНаименование 
     {
     }
 }
