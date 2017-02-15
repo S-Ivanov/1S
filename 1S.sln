@@ -12,14 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "МодульныеТесты", "МодульныеТесты\МодульныеТесты.csproj", "{BA95009F-5779-480B-A5BA-0745F2BB402D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD61728A-1031-4C1A-A032-5E597C9130F4}"
-	ProjectSection(SolutionItems) = preProject
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGeneratorCSV", "DataGeneratorCSV\DataGeneratorCSV.csproj", "{3B2EE3CD-0E17-4CE2-8A91-F23A36436D4C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWriteBinaryToSQL", "TestWriteBinaryToSQL\TestWriteBinaryToSQL.csproj", "{E34E835D-F6DC-4B49-A22B-C7E3D8BBEAEB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckUniqueGUID", "CheckUniqueGUID\CheckUniqueGUID.csproj", "{E56EE03A-C91D-4D50-A258-A6E73F46063D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{78910C5D-487B-481B-A4A1-D839A8BCD60D}"
 	ProjectSection(SolutionItems) = preProject
@@ -35,6 +29,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGeneratorSQL", "DataGeneratorSQL\DataGeneratorSQL.csproj", "{1471A4C7-311A-49E4-975D-32B418460F12}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGeneratorJSON", "DataGeneratorJSON\DataGeneratorJSON.csproj", "{44B70918-9299-4562-B705-ED2F826310E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{B5129DD7-C984-4769-A1BA-649018430CC1}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\Методика загрузки информации в 1С.docx = Doc\Методика загрузки информации в 1С.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,14 +61,6 @@ Global
 		{3B2EE3CD-0E17-4CE2-8A91-F23A36436D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B2EE3CD-0E17-4CE2-8A91-F23A36436D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B2EE3CD-0E17-4CE2-8A91-F23A36436D4C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E34E835D-F6DC-4B49-A22B-C7E3D8BBEAEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E34E835D-F6DC-4B49-A22B-C7E3D8BBEAEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E34E835D-F6DC-4B49-A22B-C7E3D8BBEAEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E34E835D-F6DC-4B49-A22B-C7E3D8BBEAEB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E56EE03A-C91D-4D50-A258-A6E73F46063D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E56EE03A-C91D-4D50-A258-A6E73F46063D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E56EE03A-C91D-4D50-A258-A6E73F46063D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E56EE03A-C91D-4D50-A258-A6E73F46063D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E0B4D59D-072F-4302-AC89-1125787D666F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0B4D59D-072F-4302-AC89-1125787D666F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0B4D59D-072F-4302-AC89-1125787D666F}.Release|Any CPU.ActiveCfg = Release|Any CPU
