@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DataSource
 {
-    public class ИсходныеДанные_Генератор : IИсходныеДанные
+    public class ИсходныеДанные_Генератор : IИсходныеДанные 
     {
         public int КоличествоКомпаний { get; set; }
         public int КоличествоПродукции { get; set; }
