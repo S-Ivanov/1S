@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataSource
 {
-    public interface IИсходныеДанные
+    public interface IИсходныеДанные 
     {
         IEnumerable<КомпанияDTO> ПолучитьКомпании();
         IEnumerable<ПродукцияDTO> ПолучитьПродукцию(КомпанияDTO компания = null);
