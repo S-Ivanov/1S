@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace DataGeneratorJSON
+namespace DataGeneratorJSON 
 {
     [DataContract]
     public class ПродукцияJSON
