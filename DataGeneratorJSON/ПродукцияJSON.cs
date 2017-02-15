@@ -3,7 +3,7 @@
 namespace DataGeneratorJSON 
 {
     [DataContract]
-    public class ПродукцияJSON
+    public class ПродукцияJSON 
     {
         [DataMember]
         public int код { get; set; }
