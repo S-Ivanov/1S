@@ -59,7 +59,7 @@ namespace DataGeneratorSQL
 
             Console.WriteLine();
             Console.Write("Press Enter to exit ...");
-            Console.ReadLine();
+            Console.ReadLine(); 
         }
     }
 }
