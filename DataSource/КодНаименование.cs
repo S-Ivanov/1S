@@ -2,7 +2,7 @@
 
 namespace DataSource
 {
-    public class КодНаименование : IEquatable<КодНаименование>
+    public class КодНаименование : IEquatable<КодНаименование> 
     {
         public Guid _IDRRef { get; set; }
 
