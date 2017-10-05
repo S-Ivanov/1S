@@ -1,41 +1,38 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace Com1For1C
 {
     /// <summary>
     /// Интерфейс COM-загрузчика данных
     /// </summary>
-    [Guid("AC2275BD-D8E9-4EC5-988C-3BCE4E1E92BE")]
+    [Guid("AC2275BD-D8E9-4EC5-988C-3BCE4E1E92BE"),
+        ComVisible(true)]
     public interface IDataLoader
     {
-        [DispId(1)]
+        [DispId(0x10000001)]
         int GetInt();
-        [DispId(2)]
+        [DispId(0x10000002)]
         void SetInt(int value);
-        [DispId(3)]
+        [DispId(0x10000003)]
         int IntValue { get; set; }
-        [DispId(4)]
+        [DispId(0x10000004)]
         string StrValue { get; set; }
-        [DispId(5)]
+        [DispId(0x10000005)]
         double DoubleValue { get; set; }
-        [DispId(6)]
+        [DispId(0x10000006)]
         DateTime DateTimeValue { get; set; }
-        [DispId(7)]
+        [DispId(0x10000007)]
         int[] IntArray { get; }
-        [DispId(8)]
+        [DispId(0x10000008)]
         int[] GetIntArray();
-        [DispId(9)]
+        [DispId(0x10000009)]
         object[] ObjectArray { get; }
-        [DispId(10)]
+        [DispId(0x1000000A)]
         object[,] ObjectArray2 { get; }
-        [DispId(11)]
+        [DispId(0x1000000B)]
         void InitData(int companies, int products);
-        [DispId(12)]
+        [DispId(0x1000000C)]
         DataEnumerable GetCompanies(int maxCode);
 
         /// <summary>

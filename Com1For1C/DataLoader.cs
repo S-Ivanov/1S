@@ -8,7 +8,10 @@ namespace Com1For1C
     /// <summary>
     /// http://easyprog.ru/index.php?option=com_content&task=view&id=1452&Itemid=48
     /// </summary>
-    [Guid("0D569C21-0DD4-4E14-8338-5B7A70CB0433"), ClassInterface(ClassInterfaceType.None)]
+    [Guid("0D569C21-0DD4-4E14-8338-5B7A70CB0433"),
+        ComVisible(true),
+        ClassInterface(ClassInterfaceType.None),
+        ComSourceInterfaces(typeof(IDataLoaderEvents))]
     public class DataLoader : IDataLoader
     {
         public DataLoader()
@@ -96,20 +99,24 @@ namespace Com1For1C
 
         public DataEnumerable GetCompanies(int maxCode)
         {
-            return new DataEnumerable(
+            var result = new DataEnumerable(
                 исходныеДанные
                 .ПолучитьКомпании()
                 .Select(
-                    company => new object[] 
+                    company => new object[]
                     {
                         maxCode + company.Код,
                         company.Наименование
                     }));
+
+            FireDataLoadedEvent();
+
+            return result;
         }
 
         public DataEnumerable GetData()
         {
-            return new DataEnumerable(
+            var result = new DataEnumerable(
                 исходныеДанные.ПолучитьКомпании()
                 .Select(
                     company => new object[]
@@ -126,7 +133,20 @@ namespace Com1For1C
                                     company.Код
                                 }))
                     }));
+
+            FireDataLoadedEvent();
+
+            return result;
         }
 
+        [ComVisible(false)]
+        public delegate void DataLoadedDelegate(int code1, int code2);
+
+        public event DataLoadedDelegate OnDataLoaded;
+
+        private void FireDataLoadedEvent()
+        {
+            OnDataLoaded?.Invoke(исходныеДанные.КоличествоКомпаний, исходныеДанные.КоличествоПродукции);
+        }
     }
 }
